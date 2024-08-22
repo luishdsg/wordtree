@@ -1,0 +1,15 @@
+{
+  "name": "wordree",
+  "module": "index.ts",
+  "type": "module",
+    "scripts": {
+      "start": "bun run main.ts analyze --depth 2 --verbose 'Eu amo papagaios'"
+    },
+  
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
