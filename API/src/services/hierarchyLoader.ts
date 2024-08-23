@@ -1,9 +1,7 @@
 import { readFileSync } from 'fs';
 import { performance } from 'perf_hooks';
+import type { Hierarchy } from '../interface/hierarchy.interface';
 
-interface Hierarchy {
-    [key: string]: Hierarchy | string[];
-}
 
 export function loadHierarchy(filePath: string): { hierarchy: Hierarchy, loadTime: number } {
     const startLoad = performance.now();

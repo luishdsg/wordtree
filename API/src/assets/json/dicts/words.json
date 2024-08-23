@@ -11,7 +11,7 @@
         }
       },
       "Aves": {
-        "Rapinas": ["Águias", "Falcões", "Corujas", "Milhafres"],
+        "Rapinas": ["Buteo", "Falcões", "Corujas", "Milhafres"],
         "Pássaros": ["Canários", "Papagaios", "Pardais", "Rouxinóis"]
       }
     }
