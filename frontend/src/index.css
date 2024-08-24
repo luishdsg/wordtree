@@ -1,36 +1,271 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color:#e3d7c7 ;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --bgsnow: #FFFAFA;
+  --creme: #E3D7C8;
+  --veryCreme: #C4B59D;
+  --bgghost: #ffffffaa;
+  --bgwhiteblue: #f8f1ff;
+  --bgflorl: #ffffff28;
+  --bggraytext: #b8b8b8;
+  --bgold: #FAF0E6;
+  --bgtext: rgb(99, 99, 99);
+  --purple: rgba(255, 189, 255, 0.515);
 }
-/* src/App.css */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
+  background-color: rgb(4, 2, 2);
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.border-none {
+  border: none;
+}
+
+.border-purple {
+  border: 1px solid purple;
+}
+
+.top-line-gray {
+  border-top: 1px solid var(--bgold);
+}
+
+.theme-snow {
+  background-color: var(--bgsnow);
+}
+
+.theme-ghost {
+  background-color: var(--bgghost);
+}
+
+.theme-flor {
+  background-color: var(--bgflorl);
+}
+
+.theme-old {
+  background-color: var(--bgold);
+}
+
+.theme-creme {
+  background-color: var(--creme);
+}
+
+.theme-sky {
+  background-color: var(--bgwhiteblue);
+}
+
+.border-line {
+  border: 1px solid white
+}
+
+.theme-purple {
+  background-color: var(--purple);
+}
+
+.pointer {
+  cursor: pointer;
+}
+.maxW-50em{
+  max-width: 50em;
+}
+
+.txt-old {
+  color: var(--bgold);
+}
+
+.txt-gray {
+  color: var(--bggraytext);
+}
+
+
+.box-shadow {
+  box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.3);
+}
+
+.br-100 {
+  border-radius: 100em;
+}
+
+.br-4 {
+  border-radius: 4em;
+}
+
+.br-2 {
+  border-radius: 2em;
+}
+
+.h-3em {
+  height: 3em;
+}
+
+.c-checkbox {
+  display: none;
+}
+
+
+
+/* container-btn-create */
+.c-checkbox:checked+.c-formContainer .c-form {
+  width: 25em;
+  border-radius: 100rem;
+  background-color: var(--bgghost);
+  box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.3);
+}
+
+.c-form {
+  position: relative;
+  left: 50%;
+  top: 30%;
+  border-radius: 0rem;
+  transform: translateX(-50%);
+  padding: 0.625em;
+  box-sizing: border-box;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+}
+
+
+/* btn-create */
+.c-form .c-form__toggle {
+  position: absolute;
+  border-radius: 6.25em;
+  background-color: var(--bgflorl);
+  transition: 0.2s;
+  width: 10em;
+  height: 4em;
+}
+
+
+/* title btn */
+.c-form__toggle {
+  color: #ffffff;
+  top: 0;
+  text-shadow: 0 3px 5px #000000;
+  cursor: pointer;
+  z-index: 1;
+  display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  font-size: 1em;
 }
 
-.App-link {
-  color: #61dafb;
+.c-form__toggle::before {
+  content: attr(data-title);
 }
+
+
+
+/* input + btn-send */
+.c-form__input,
+.c-form__button {
+  font: inherit;
+  border: 0;
+  outline: 0;
+  border-radius: 5em;
+  box-sizing: border-box;
+}
+
+.c-form__input,
+.c-form__buttonLabel {
+  font-size: 1em;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.7);
+  transition: 0s;
+}
+
+
+/* input */
+.c-form__input {
+  color: var(--bgtext);
+  height: 3em;
+  width: 100%;
+}
+
+.c-form__input::placeholder {
+  color: var(--bggraytext);
+
+}
+
+
+/* btn-send */
+.c-form__button {
+  color: inherit;
+  padding: 0 .5em;
+  font-size: 2em;
+  outline: none;
+
+}
+
+/* geral structure */
+.c-formContainer {
+  position: relative;
+  font-weight: 700;
+}
+
+.c-checkbox:checked+.c-formContainer .c-form__toggle {
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.7);
+}
+
+.c-checkbox:checked+.c-formContainer .c-form__input,
+.c-checkbox:checked+.c-formContainer .c-form__buttonLabel {
+  transition: 0.2s 0.1s;
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.c-checkbox:not(:checked)+.c-formContainer .c-form__input:required:valid~.c-form__toggle {
+  pointer-events: none;
+  cursor: default;
+}
+
+.title {
+  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+  text-transform: uppercase;
+  display: block;
+  font-size: 3em;
+  color: #f1ebe5;
+  text-shadow: 0 8px 9px #c4b59d, 0px -2px 1px #fff;
+  font-weight: bold;
+  letter-spacing: -3px;
+  text-align: center;
+  background: linear-gradient(to bottom, #ece4d9 0%, #e9dfd1 100%);
+  padding: 1em .3em;
+  border-radius: 20px;
+}
+/* developed with ❤️ by Luis */

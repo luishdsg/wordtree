@@ -1,17 +1,13 @@
 // src/App.tsx
 import React from 'react';
-import './App.css';
-import {HierarchyEditor} from './components/HierarchyEditor';
+import { HomeHierarchicalTree } from './layout/HomeHierarchicalTree';
 
 const App: React.FC = () => {
     return (
         <div className="App">
-            <header className="App-header">
-                <h1>Hierarchy Editor</h1>
-                <HierarchyEditor />
-            </header>
+                <HomeHierarchicalTree />
         </div>
     );
 };
-
 export default App;
+// developed with ❤️ by Luis
