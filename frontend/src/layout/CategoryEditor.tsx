@@ -19,7 +19,7 @@ export const Category: React.FC<CategoryProps> = ({ node, addCategory, parentPat
   return (
     <>
       <div className='col px-3 py-4'>
-        <div className='w-100 py-3  h-100 br-4'>
+        <div className='w-100 py-3 mb-5 h-100 br-4'>
           <h4>Subcategorias de {node.name}</h4>
           <div className='row'>
             <div className='col'>
