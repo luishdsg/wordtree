@@ -1,8 +1,8 @@
 import { analyzePhrase } from '../services/phraseAnalyzer';
 import { createExpectedWord, sampleHierarchy } from './analyzePhrase.longText.test';
 
-describe('analyzePhrase - Same Category Test', () => {
-    it('should correctly count words from the same category', () => {
+describe('analyzePhrase - Teste Mesma Categoria', () => {
+    it('deve contar corretamente palavras da mesma categoria ', () => {
         const phrase = `Eu vi Canários, Papagaios, e Pardais no parque.`.trim();
         const depth = 3;
         const expectedOutput = {
@@ -19,7 +19,7 @@ describe('analyzePhrase - Same Category Test', () => {
         // Agrupa as contagens de palavras por seu grupo hierárquico
         const groupedCounts: Record<string, number> = {};
         Object.values(result.wordCount).forEach(({ count, path }) => {
-            const groupName = path[path.length - 1]; // Nome do grupo no penúltimo nível
+            const groupName = path[path.length - 1];
             if (groupName) {
                 if (!groupedCounts[groupName]) {
                     groupedCounts[groupName] = 0;
@@ -28,7 +28,6 @@ describe('analyzePhrase - Same Category Test', () => {
             }
         });
         
-        // Constrói as strings de saída
         const groupOutput = Object.entries(groupedCounts)
             .map(([group, count]) => `${group} = ${count} ${count === 1 ? `Um(a) ${group.toLowerCase()} foi mencionado(a)` : ''}`)
             .join(';\n');
@@ -36,12 +35,9 @@ describe('analyzePhrase - Same Category Test', () => {
         const wordInfoOutput = Object.entries(result.wordCount)
             .map(([word, { count, path }]) => `${word}: ${count} (${path[path.length - 1]})`)
             .join(';\n');
-        
-        // Exibe todos os dados em um único console.log
+
         console.log(`${wordInfoOutput};\n${groupOutput}`);
         
-
-        // Como todas as palavras pertencem à mesma categoria ("Pássaros"), o teste espera que o count seja acumulado sob essa categoria.
         expect(result.wordCount).toEqual(expect.objectContaining(expectedOutput.wordCount));
         // Verifica se o count total da categoria "Pássaros" está correto
         const totalPássaros = Object.entries(result.wordCount).reduce((acc, [word, { count, path }]) => {
@@ -54,3 +50,4 @@ describe('analyzePhrase - Same Category Test', () => {
         expect(totalPássaros).toBe(3);
     });
 });
+// developed with 💻 by Luis

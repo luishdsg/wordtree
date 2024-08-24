@@ -10,3 +10,4 @@ export function loadHierarchy(filePath: string): { hierarchy: Hierarchy, loadTim
     const loadTime = performance.now() - startLoad;
     return { hierarchy, loadTime };
 }
+// developed with 💻 by Luis
