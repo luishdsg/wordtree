@@ -4,8 +4,12 @@ This project was bootstrapped with [React](https://github.com/facebook/create-re
 
 ## Scripts Disponíveis
 
+Execulte para baixar as dependências do projeto
+### `yarn install`
+
+
 No diretório do projeto, você pode executar:
-### `npm run start`
+### `yarn run start`
 
 Executa o app em modo de desenvolvimento.
 Abra [http://localhost:3000](http://localhost:3000)  para visualizá-lo no navegador.
@@ -13,12 +17,12 @@ Abra [http://localhost:3000](http://localhost:3000)  para visualizá-lo no naveg
 A página será recarregada se você fizer edições.
 Você também verá quaisquer erros de lint no console.
 
-### `npm test`
+### `yarn test`
 
 Inicia o runner de testes em modo interativo.
 Consulte a seção sobre [ executar testes ](https://facebook.github.io/create-react-app/docs/running-tests)
 
-### `npm run build`
+### `yarn run build`
 
 Cria o app para produção na pasta  `build`.
 Ele agrupa corretamente o React em modo de produção e otimiza a build para melhor desempenho.
@@ -27,7 +31,7 @@ A build é minificada e os nomes dos arquivos incluem hashes.
 Seu app está pronto para ser implantado!
 
 
-### `npm run eject`
+### `yarn run eject`
 
 **Nota: esta é uma operação irreversível. Uma vez que você  `eject`, não é possível voltar!**
 
