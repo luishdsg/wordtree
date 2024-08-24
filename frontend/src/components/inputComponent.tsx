@@ -12,4 +12,4 @@ export const InputSub: React.FC<InputDefaultProps> = ({ value, onChange, placeho
         <input className="br-100 poppins-bold fs-6 border-none theme-snow ps-3 h-3em w-100" placeholder={placeholder} type="text" value={value} onChange={(e) => onChange(e.target.value)} pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required />
     )
 }
-// developed with ❤️ by Luis
+// developed with 💻 by Luis

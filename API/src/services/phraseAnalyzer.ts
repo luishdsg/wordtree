@@ -23,7 +23,6 @@ function findWordsInHierarchy(hierarchy: Hierarchy, phrase: string, currentPath:
     for (const key in hierarchy) {
         const value = hierarchy[key];
         const newPath = currentPath.concat(key);
-
         if (Array.isArray(value)) {
             value.forEach(word => {
                 const regex = new RegExp(`\\b${word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i');
@@ -39,7 +38,6 @@ function findWordsInHierarchy(hierarchy: Hierarchy, phrase: string, currentPath:
             wordCount = { ...wordCount, ...nestedWordCount };
         }
     }
-
     return wordCount;
 }
 
@@ -65,4 +63,5 @@ export function analyzePhrase(
     const analyzeTime = performance.now() - startAnalyze;
     return { wordCount, analyzeTime, wordsAtDepth };
 }
+// developed with 💻 by Luis
 

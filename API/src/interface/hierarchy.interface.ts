@@ -6,3 +6,4 @@ export interface WordInfo {
     count: number;
     path: string[];
 }
+// developed with 💻 by Luis

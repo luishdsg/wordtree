@@ -2,4 +2,4 @@
 export interface Hierarchy {
     [key: string]: Hierarchy | string[];
 }
-// developed with ❤️ by Luis
+// developed with 💻 by Luis

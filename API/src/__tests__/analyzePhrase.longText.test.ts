@@ -31,6 +31,7 @@ describe('analyzePhrase - Texto Longo Teste', () => {
             }
             groupedWordCounts[word].count += count;
         });
+
         // Exibe as palavras encontradas e suas informações
         Object.entries(groupedWordCounts).forEach(([word, { count, path }]) => {
             console.log(`Palavras encontradas e suas informações: ${word}: ${count} (${path[path.length - 1]})`);
@@ -39,6 +40,5 @@ describe('analyzePhrase - Texto Longo Teste', () => {
         expect(result.wordCount).toEqual(expect.objectContaining(expectedOutput.wordCount));
         expect(result.analyzeTime).toBeGreaterThan(0);
     });
-}
-
-);
+});
+// developed with 💻 by Luis

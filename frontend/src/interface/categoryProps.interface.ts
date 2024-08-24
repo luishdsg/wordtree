@@ -11,4 +11,4 @@ export interface CategoryProps {
     addCategory: (name: string, value: string | undefined, parentPath: string[]) => void;
     parentPath?: string[];
   }
-// developed with ❤️ by Luis
+// developed with 💻 by Luis

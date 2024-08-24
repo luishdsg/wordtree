@@ -61,4 +61,4 @@ export const SubCategoryComponent: React.FC<SubCategoryProps> = ({ key, node, ad
         </div>
     );
 };
-// developed with ❤️ by Luis
+// developed with 💻 by Luis

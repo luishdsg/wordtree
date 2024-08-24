@@ -13,5 +13,10 @@
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "developmentAmbient": {
+    "sublime": "^3.2.2",
+    "visualstudiocode": "^1.92.1:",
+    "notepad++": "^8.6.4"
   }
 }

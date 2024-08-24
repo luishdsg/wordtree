@@ -3,4 +3,4 @@ export interface InputDefaultProps {
     onChange: (value: string) => void;
     placeholder: string;
   }
-// developed with ❤️ by Luis
+// developed with 💻 by Luis

@@ -61,4 +61,4 @@ export const Category: React.FC<CategoryProps> = ({ node, addCategory, parentPat
     </>
   );
 };
-// developed with ❤️ by Luis
+// developed with 💻 by Luis

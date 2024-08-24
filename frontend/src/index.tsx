@@ -13,4 +13,4 @@ root.render(
   </React.StrictMode>
 );
 reportWebVitals();
-// developed with ❤️ by Luis
+// developed with 💻 by Luis
