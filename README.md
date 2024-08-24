@@ -1,5 +1,5 @@
 # Esse diretório possui 2 projetos
-  ## FRONTEND  e # API(CLI)
+  ## FRONTEND  e  API(CLI)
 
   
 # PROJETO FRONTEND
