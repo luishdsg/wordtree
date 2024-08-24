@@ -4,7 +4,7 @@
   
 # PROJETO FRONTEND
 
-This project was bootstrapped with [React](https://github.com/facebook/create-react-app).
+Este projeto foi feito com [React](https://github.com/facebook/create-react-app).
 
 ## Scripts Disponíveis
 
